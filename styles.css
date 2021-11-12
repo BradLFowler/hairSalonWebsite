@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 2fr .5fr;
+    grid-template-areas: 
+    "name nav nav nav"
+    "main main main main"
+    "foot foot foot foot";
+}
+
+#sitename {
+    grid-area: name;
+}
+
+#navbuttons {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main > img {
+    height: 300px;
+    width: 300px;
+}
+
+#foot {
+    grid-area: foot;
+}
