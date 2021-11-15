@@ -1,8 +1,148 @@
+/* need to align the foot text somehow */
 
-/* still needs media queries and a little more color tweaking */
+@media (min-width: 400px) {
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .5fr 2fr 2fr 2fr 2fr 1fr;
+        grid-template-areas: 
+        "name"
+        "nav"
+        "top-left"
+        "top-right"
+        "bottom-left"
+        "bottom-right"
+        "foot";
+        background-color: rgb(34, 34, 146);
+    }
+
+    img {
+        width: 400px;
+        height: 300px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        background-color: orange;
+        color: royalblue;
+    }
+
+    h2 {
+        font-size: 30px;
+        background-color: orange;
+        color: royalblue;
+    }
+
+    #navbuttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #navbuttons > button {
+        height: 50px;
+        width: 90px;
+        border-radius: 30px;
+        background-color: orange;
+        color: white;
+    }
+
+    #beardpic1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #beardpic2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #hairpic1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #hairpic2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #foot {
+        text-align: center;
+        margin-top: 40px;
+        margin-top: 20px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+    }
+
+}
+
+@media (min-width: 769px) {
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr 1fr .5fr;
+        grid-template-areas: 
+        "name nav"
+        "topleft topright"
+        "bottomleft bottomright"
+        "foot foot";
+    }
+
+    img {
+        width: 300px;
+        height: 200px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h2 {
+        color: royalblue;
+    }
+
+    #beardpic1 {
+        background-color: orange;
+        padding-top: 20px;
+    }
+
+    #beardpic2 {
+        background-color: orange;
+        padding-top: 20px;
+    }
+
+    #hairpic1 {
+        background-color: orange;
+        padding-top: 20px;
+    }
+
+    #hairpic2 {
+        background-color: orange;
+        padding-top: 20px;
+    }
+    
+}
 
 
+/* still needs a little more color tweaking */
 
+/* maybe make the 900px width 2 columns instead of 4 */
+@media (min-width: 900px) {
 #gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -71,19 +211,7 @@ p {
     margin-left: 50px;
     margin-right: 60px;
     padding-top: 40px;
-}
-
-#beardpic1 > img {
-    margin-left: 25%;
-}
-
-#beardpic1 > h2 {
-    margin-left: 41%;
-}
-
-#beardpic1 > p {
-    margin-left: 15%;
-    margin-right: 10%;
+    text-align: center;
 }
 
 #beardpic2 {
@@ -95,19 +223,7 @@ p {
     margin-right: 50px;
     margin-top: 80px;
     padding-top: 40px;
-}
-
-#beardpic2 > img {
-    margin-left: 27%;
-}
-
-#beardpic2 > h2 {
-    margin-left: 43%;
-}
-
-#beardpic2 > p {
-    margin-left: 20%;
-    margin-right: 10%;
+    text-align: center;
 }
 
 #hairpic1 {
@@ -119,19 +235,7 @@ p {
     margin-left: 50px;
     margin-right: 60px;
     padding-top: 40px;
-}
-
-#hairpic1 > img {
-    margin-left: 25%;
-}
-
-#hairpic1 > h2 {
-    margin-left: 37%;
-}
-
-#hairpic1 > p {
-    margin-left: 15%;
-    margin-right: 10%;
+    text-align: center;
 }
 
 #hairpic2 {
@@ -142,19 +246,7 @@ p {
     margin-right: 50px;
     margin-top: 80px;
     padding-top: 40px;
-}
-
-#hairpic2 > img {
-    margin-left: 27%;
-}
-
-#hairpic2 > h2 {
-    margin-left: 40%;
-}
-
-#hairpic2 > p {
-    margin-left: 20%;
-    margin-right: 10%;
+    text-align: center;
 }
 
 #foot {
@@ -171,6 +263,8 @@ p {
 
 #foot > p {
     text-align: center;
-    margin-top: 20%;
+    padding-top: 25%;
     font-size: 30px;
+}
+
 }
