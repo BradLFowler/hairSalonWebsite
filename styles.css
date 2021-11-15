@@ -1,11 +1,40 @@
-body {
+
+/* still needs media queries and a little more color tweaking */
+
+
+
+#gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .5fr 2fr .5fr;
+    grid-template-rows: .5fr 2fr  2fr 4.5fr;
     grid-template-areas: 
     "name nav nav nav"
-    "main main main main"
+    "topleft topleft topright topright"
+    "bottomleft bottomleft bottomright bottomright"
     "foot foot foot foot";
+    background-color: rgb(34, 34, 146);
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+h1 {
+    display: inline-block;
+    background-color: orange;
+    color: royalblue;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+h2 {
+    color: royalblue;
+}
+
+p {
+    color: white;
 }
 
 #sitename {
@@ -15,21 +44,133 @@ body {
 #navbuttons {
     grid-area: nav;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-}
-
-#main {
-    grid-area: main;
-    display: flex;
-    justify-content: center;
+    margin-top: 60px;
+    background-color: orange;
     align-items: center;
+    margin-right: 50px;
+    margin-left: 80px;
+    height: 100px;
 }
 
-#main > img {
-    height: 300px;
-    width: 300px;
+#navbuttons > button {
+    height: 50px;
+    width: 120px;
+    border-radius: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+#beardpic1 {
+    grid-area: topleft;
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding-top: 40px;
+}
+
+#beardpic1 > img {
+    margin-left: 25%;
+}
+
+#beardpic1 > h2 {
+    margin-left: 41%;
+}
+
+#beardpic1 > p {
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+#beardpic2 {
+    grid-area: topright;
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
+#beardpic2 > img {
+    margin-left: 27%;
+}
+
+#beardpic2 > h2 {
+    margin-left: 43%;
+}
+
+#beardpic2 > p {
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+#hairpic1 {
+    grid-area: bottomleft;
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding-top: 40px;
+}
+
+#hairpic1 > img {
+    margin-left: 25%;
+}
+
+#hairpic1 > h2 {
+    margin-left: 37%;
+}
+
+#hairpic1 > p {
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+#hairpic2 {
+    grid-area: bottomright; display: flex;
+    flex-direction: column;
+    background-color: orange;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
+#hairpic2 > img {
+    margin-left: 27%;
+}
+
+#hairpic2 > h2 {
+    margin-left: 40%;
+}
+
+#hairpic2 > p {
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 #foot {
     grid-area: foot;
+    background-image: url("barberShopPics/firstPicForHairS.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: orange;
+    margin-top: 90px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#foot > p {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 30px;
 }
