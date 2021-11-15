@@ -1,0 +1,72 @@
+#gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name nav"
+    "head head"
+    "main1 main1"
+    "main2 main2"
+    "foot foot";
+}
+
+body {
+    background-color: rgb(34, 34, 146);
+}
+
+h1 {
+    grid-area: name;
+    display: inline-block;
+    background-color: orange;
+    color: royalblue;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+h2 {
+    grid-area: head;
+    background-color: orange;
+    color: royalblue;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: orange;
+}
+
+nav > button {
+    height: 50px;
+    width: 90px;
+    border-radius: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+#main1 {
+    grid-area: main1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    background-color: orange;
+}
+
+/* figure out how to get mains aligned */
+
+#main2 {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: orange;
+}
+
+#ourInfo {
+    grid-area: foot;
+    text-align: center;
+    background-color: orange;
+}
