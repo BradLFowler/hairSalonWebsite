@@ -1,0 +1,143 @@
+body {
+    background-color: rgb(34, 34, 146);
+}
+
+@media (min-width: 900px) {
+#gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name nav nav nav"
+    "head head head head"
+    "picrow1 picrow1 picrow1 picrow1"
+    "picrow2 picrow2 picrow2 picrow2"
+    "picrow3 picrow3 picrow3 picrow3";
+}
+    
+img {
+    height: 250px;
+    width: 250px;
+    border: 5px solid orange;
+}
+    
+h1 {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    color: royalblue;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+h2 {
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    color: royalblue;
+    align-items: center;
+    justify-content: center;
+}
+    
+#name {
+    grid-area: name;
+    background-color: orange;
+    color: royalblue;
+}
+    
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    background-color: orange;
+    align-items: center;
+}
+    
+nav > a button {
+    height: 50px;
+    width: 120px;
+    border-radius: 30px;
+    background-color: royalblue;
+    color: white;
+}
+    
+#imgrow1 {
+    grid-area: picrow1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+    
+#imgrow2 {
+    grid-area: picrow2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+    
+#imgrow3 {
+    grid-area: picrow3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    
+}
+
+@media (min-width: 400px) {
+
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#name {
+    grid-area: name;
+}
+
+h1 {
+    background-color: orange;
+    color: royalblue; 
+}
+
+nav {
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav > a button {
+    height: 50px;
+    width: 90px;
+    border-radius: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+h2 {
+    grid-area: head;
+}
+
+#imgrow1 {
+    grid-area: picrow1;
+}
+
+#imgrow2 {
+    grid-area: picrow2;
+}
+
+#imgrow3 {
+    grid-area: picrow3;
+}
+
+}
