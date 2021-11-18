@@ -1,0 +1,105 @@
+h1 {
+    grid-area: name;
+    font-size: 50px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+#main {
+    grid-area: main;
+}
+
+#sidebar {
+    grid-area: side;
+}
+
+body {
+    background-color: rgb(34, 34, 146);
+}
+
+@media (min-width: 400px) {
+#gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 1fr 2fr;
+    grid-template-areas: 
+    "name"
+    "nav"
+    "side"
+    "main";
+}
+
+h1 {
+    background-color: orange;
+    color: royalblue;
+}
+
+nav {
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > a button {
+    background-color: royalblue;
+    height: 50px;
+    width: 90px;
+    border-radius: 30px;
+    color: white;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid orange;
+    color: white;
+}
+
+#main {
+    background-color: orange;
+    color: royalblue;
+    text-align: center;
+}
+
+#main > p {
+    color: white;
+}
+
+}
+
+@media (min-width: 750px) {
+#gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: 
+    "name nav"
+    "side main";
+}
+
+nav {
+    height: 140px;
+    margin-top: 45px;
+}
+
+}
+
+@media (min-width: 900px) {
+nav > a button {
+    width: 120px;
+}
+
+nav {
+    margin-bottom: 50px;
+}
+
+#main {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+}
