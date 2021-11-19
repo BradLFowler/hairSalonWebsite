@@ -159,6 +159,9 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 #imgrow2 {
@@ -168,6 +171,9 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 #imgrow3 {
@@ -177,6 +183,9 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 }
